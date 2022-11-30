@@ -1,0 +1,31 @@
+<form version="1.1" script="sonar_textbox.js">
+  <label>Sonar Daily Template Statistics</label>
+  <row>
+    <panel id="sonar">
+      <title>Sonar panel</title>
+      <table id="sonar_table">
+        <search id="myPrimarySearch">
+          <query>| makeresults
+| eval Alert=mvappend("Anthem Failed Logins by Host", "Anthem Failed Logins by Users", "Anthem Long Running Queries","Anthem Slow Query", "Anthem New DB User", "Anthem New Dynamo DB User", "Anthem Brute Force Login Attacks", "Anthem Exessive Successful Connections")
+| mvexpand Alert
+| eval Count="10"
+| mvexpand Count
+| table Alert Count
+| eval "# OTN"="", "# TOT"="", "# TRT"=""</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+      <!--<html>-->
+      <!--  <div>-->
+      <!--    <input type="button" id="btn">Save</input>-->
+      <!--  </div>-->
+      <!--</html>-->
+      <html>
+      <button id="save">Save</button>
+    </html>
+    </panel>
+  </row>
+</form>

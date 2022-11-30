@@ -1,0 +1,12 @@
+[app/ui]
+version = 9.0.2
+modtime = 1669830862.471497400
+
+[app/launcher]
+version = 9.0.2
+modtime = 1669830862.504532100
+
+[views/sonar_daily_template_statistics]
+owner = anirudh
+version = 9.0.2
+modtime = 1669830957.045128600
