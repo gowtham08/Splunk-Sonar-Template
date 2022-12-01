@@ -10,3 +10,8 @@ modtime = 1669830862.504532100
 owner = anirudh
 version = 9.0.2
 modtime = 1669830957.045128600
+
+[props/splunk%3Asonar%3Ajson]
+owner = admin
+version = 9.0.1
+modtime = 1669917333.807494800
