@@ -22,26 +22,34 @@ require([
 				$td.append(cell.value)
 			}
             if (cell.field === "# OTN") {
-				console.log("alert id OTN-"+alert_id);
+				//console.log("alert id OTN-"+alert_id);
                 var strHtmlInput = "<input type='text' class='table-text-box' value='0' id='OTN__" + alert_id + "'></input>";
                 //Add TextBox With Specific Style
                 $td.append(strHtmlInput);
             } else if (cell.field === "# TOT") {
-				console.log("alert id TOT-"+alert_id);
+				//console.log("alert id TOT-"+alert_id);
                 var strHtmlInput = "<input type='text' class='table-text-box' value='0' id='TOT__" + alert_id + "'></input>";
                 //Add TextBox With Specific Style
                 $td.append(strHtmlInput);
             } else if (cell.field === "# TRT") {
-				console.log("alert id TRT-"+alert_id);
+				//console.log("alert id TRT-"+alert_id);
                 var strHtmlInput = "<input type='text' class='table-text-box' value='0' id='TRT__" + alert_id + "'></input>";
                 //Add TextBox With Specific Style
                 $td.append(strHtmlInput);
             }
-                           
+						                           
         }
     })
-    
-   
+	
+	$("#save").on('click', function() {
+		  console.log("Save is clicled");
+		  var Row = document.getElementsByClassName("shared-resultstable-resultstablerow");
+		  for(j=0;j<8;j++){
+			RowValue=Row[j].innerText;
+			console.log("Row values - "+RowValue)  
+		  }
+		});
+	       
     id=["sonar_table"]
    
     for(var i=0;i < id.length;i++){
