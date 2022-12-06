@@ -58,9 +58,9 @@ require([
                 }, 600);
                 insertData(log)
             }
-			/*window.setTimeout( function() {
+			window.setTimeout( function() {
 			  window.location.reload();
-			}, 10000);*/
+			}, 10000);
 		
 	});
 

@@ -1,17 +1,22 @@
 .load {
-    background:url(loading_apple.gif) no-repeat center 150px rgba(0, 0, 0, 0.25) !important;
-    background-size:90px 90px !important;
-	display: block !important;
-    width: 11%;
-    height: 34vh;
-    z-index: 9999;
-    margin-left: 32% !important;
+    background: url(loading_apple.gif);
+    background-position: center;
+    background-size: contain;
+    display: block !important;
+    width: 10vh;
+    height: 10vh;
 }
 
 .add-saving {
     opacity: .6 !important;
     filter: blur(.5px) !important;
     cursor: not-allowed !important;
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
 }
 
 .panel-body.html {
