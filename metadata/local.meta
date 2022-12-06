@@ -15,3 +15,10 @@ modtime = 1670321694.345037800
 owner = admin
 version = 9.0.1
 modtime = 1669917333.807494800
+
+[savedsearches/Sonar%20Report]
+access = read : [ * ], write : [ admin ]
+export = none
+owner = anirudh
+version = 9.0.2
+modtime = 1670346127.087473200
