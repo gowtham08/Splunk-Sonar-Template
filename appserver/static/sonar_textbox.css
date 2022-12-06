@@ -1,0 +1,25 @@
+.load {
+    background:url(loading_apple.gif) no-repeat center 150px rgba(0, 0, 0, 0.25) !important;
+    background-size:90px 90px !important;
+	display: block !important;
+    width: 11%;
+    height: 34vh;
+    z-index: 9999;
+    margin-left: 32% !important;
+}
+
+.add-saving {
+    opacity: .6 !important;
+    filter: blur(.5px) !important;
+    cursor: not-allowed !important;
+}
+
+.panel-body.html {
+    width: 60%;
+    padding-left: 20% !important;
+}
+
+.sonar-load {
+    border: 3px solid #c3cbd4;
+}
+

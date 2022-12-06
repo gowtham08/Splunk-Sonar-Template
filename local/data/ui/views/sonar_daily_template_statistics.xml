@@ -1,8 +1,11 @@
-<form version="1.1" script="sonar_textbox.js">
+<form version="1.1" script="sonar_textbox.js" stylesheet="sonar_textbox.css">
   <label>Sonar Daily Template Statistics</label>
   <row>
     <panel id="sonar">
       <title>Sonar panel</title>
+      <html>
+        <div class="sonar-load"></div>
+      </html>
       <table id="sonar_table">
         <search id="myPrimarySearch">
           <query>| makeresults

@@ -5,6 +5,8 @@ require([
     'splunkjs/mvc/tableview',
     'splunkjs/mvc/simplexml/ready!'
 ], function (_, $, mvc, TableView) {
+	
+	$(".sonar-load").hide();
 
     // below code is used to get the data from the table cells and index to the index
 
@@ -28,10 +30,10 @@ require([
     $("#save").on('click', function () {
         
         console.log("Save is clicked");
+		var log = ""
         
         $(".shared-resultstable-resultstablerow").each(function () {
 
-            var log = ""
             $($(this)[0].children).each(function (index, value) {
                 if (index < 2) {
                     // console.log($(this)[0].innerText)
@@ -42,11 +44,25 @@ require([
                 }
             })
             console.log(`log --> ${log}`)
-            insertData(log)
+            //insertData(log)
         })
 
-        alert("data stored successfully")
-    });
+        //alert("data stored successfully")
+		var config =  confirm("Data wil be stored")
+		if (config == true) 
+                {
+                $('.sonar-load').addClass("load");
+				$('.panel-body.html').addClass("add-saving");
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                insertData(log)
+            }
+			/*window.setTimeout( function() {
+			  window.location.reload();
+			}, 10000);*/
+		
+	});
 
 
     //// below code is used for rendering the text boxes inside table cells
@@ -89,8 +105,8 @@ require([
     id = ["sonar_table"]
 
     for (var i = 0; i < id.length; i++) {
-        console.log("i " + i)
-        console.log("id " + id[i])
+        //console.log("i " + i)
+        //console.log("id " + id[i])
         mvc.Components.get(id[i]).getVisualization(function (tableView) {
             // Add custom cell renderer, the table will re-render automatically.
             tableView.addCellRenderer(new CustomRangeRenderer());
